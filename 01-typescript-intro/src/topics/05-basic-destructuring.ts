@@ -27,15 +27,15 @@ const song = 'New Song'
 const {song: anotherSong, songDuration, details} = audioPlayer;
 const {author} = details;
 
-/* console.log("Canción: ", song);
+console.log("Canción: ", anotherSong);
 console.log("Autor: ", author);
-console.log("Duración: ", songDuration); */
+console.log("Duración: ", songDuration); 
 
 // const dbz: string[] = ['Goku', 'Vegeta', 'Trunks'];
 // const trunks = dbz[3] || 'No hay personaje';
 
-const [, , trunks = 'Not found']: string[] =  ['Goku', 'Vegeta'];
+// const [, , trunks = 'Not found']: string[] =  ['Goku', 'Vegeta'];
 
-console.error('Personaje 3:', trunks);
+// console.error('Personaje 3:', trunks);
 
 export{};
