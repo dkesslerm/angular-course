@@ -9,19 +9,28 @@ const GIPHY_API_KEY = "NkvJqu9vfExJ5bzXfLE6Qg8PPaRrNJbd";
 })
 export class GifsService {
 
-  public gifList: Gif[] = [];
-
+  // ATRIBUTOS
+  private _gifList:     Gif[] = [];
   private _tagsHistory: string[] = [];
   private apiKey:       string = GIPHY_API_KEY;
   private serviceUrl:   string = 'https://api.giphy.com/v1/gifs'
 
+  // CONSTRUCTOR
   constructor(private http: HttpClient) {
     this.loadLocalStorage();
+  }
+
+  // GETTERS
+
+  get gifList(){
+    return [...this._gifList];
   }
 
   get tagsHistory(){
     return [...this._tagsHistory];
   }
+
+  // PRIVATE
 
   private organizeHistory(tag: string): void{
     tag = tag.toLowerCase();
@@ -48,7 +57,8 @@ export class GifsService {
     this.searchTag(this._tagsHistory[0]);
   }
 
-  searchTag(tag: string): void{
+  // PUBLIC
+  public searchTag(tag: string): void{
     if (tag.length == 0) return;
     this.organizeHistory(tag);
 
@@ -60,7 +70,7 @@ export class GifsService {
     this.http.get<SearchResponse>(`${ this.serviceUrl }/search`, { params })
       .subscribe((resp) => {
 
-        this.gifList = resp.data;
+        this._gifList = resp.data;
       });
   }
 
