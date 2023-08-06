@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'auth-login-page',
@@ -8,8 +10,16 @@ import { Component } from '@angular/core';
 })
 export class LoginPageComponent {
 
-  public hidePassword(){
+  constructor(
+    private authService: AuthService,
+    private router: Router
+  ){}
 
+  public onLogin(){
+    this.authService.login('dkesslerm@gmail.com', '1234')
+      .subscribe( user => {
+        this.router.navigateByUrl('/');
+      })
   }
 
 }

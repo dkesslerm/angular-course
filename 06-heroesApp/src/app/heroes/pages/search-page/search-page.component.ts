@@ -3,6 +3,8 @@ import { FormControl } from '@angular/forms';
 import { Hero } from '../../interfaces/hero.interface';
 import { HeroesService } from '../../services/heroes.service';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
+import { AppRoutingModule } from '../../../app-routing.module';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'heroes-search-page',
@@ -16,7 +18,11 @@ export class SearchPageComponent {
   public heroes: Hero[] = [];
   public selectedHero?: Hero;
 
-  constructor(private heroesService: HeroesService){}
+  constructor(
+    private heroesService: HeroesService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute
+  ){}
 
   searchHero(): void{
     const value: string = this.searchInput.value || '';
@@ -35,5 +41,7 @@ export class SearchPageComponent {
     this.searchInput.setValue( hero.superhero );
 
     this.selectedHero = hero;
+
+    this.router.navigateByUrl(`heroes/${this.selectedHero.id}`)
   }
 }
