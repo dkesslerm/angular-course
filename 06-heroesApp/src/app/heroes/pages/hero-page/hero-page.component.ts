@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HeroesService } from '../../services/heroes.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { switchMap } from 'rxjs';
+import { delay, switchMap } from 'rxjs';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { Hero } from '../../interfaces/hero.interface';
 
@@ -33,6 +33,8 @@ export class HeroPageComponent implements OnInit{
     private router: Router)
   {}
 
-
+  public goBack(){
+    this.router.navigateByUrl('heroes/list')
+  }
 
 }
