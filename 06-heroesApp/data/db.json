@@ -8,14 +8,6 @@
   ],
   "heroes": [
     {
-      "id": "dc-batman",
-      "superhero": "Batman",
-      "publisher": "DC Comics",
-      "alter_ego": "Bruce Wayne",
-      "first_appearance": "Detective Comics #27",
-      "characters": "Bruce Wayne"
-    },
-    {
       "id": "dc-superman",
       "superhero": "Superman",
       "publisher": "DC Comics",
@@ -113,20 +105,13 @@
       "characters": "Tony Stark"
     },
     {
-      "id": "marvel-thor",
-      "superhero": "Thor",
-      "publisher": "Marvel Comics",
-      "alter_ego": "Thor Odinson",
-      "first_appearance": "Journey into Myster #83",
-      "characters": "Thor Odinson"
-    },
-    {
       "id": "marvel-hulk",
       "superhero": "Hulk",
       "publisher": "Marvel Comics",
       "alter_ego": "Bruce Banner",
       "first_appearance": "The Incredible Hulk #1",
-      "characters": "Bruce Banner"
+      "characters": "Bruce Banner, David",
+      "alt_img": null
     },
     {
       "id": "marvel-wolverine",
@@ -167,6 +152,15 @@
       "alter_ego": "Norrin Radd",
       "first_appearance": "The Fantastic Four #48",
       "characters": "Norrin Radd"
+    },
+    {
+      "id": "qUpLtwy",
+      "superhero": "Nombre1",
+      "publisher": "Marvel Comics",
+      "alter_ego": "no se",
+      "first_appearance": "comics #1",
+      "characters": "personaje",
+      "alt_img": "https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png"
     }
   ]
 }

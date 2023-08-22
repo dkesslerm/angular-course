@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'auth-register-page',
@@ -8,10 +11,8 @@ import { Component } from '@angular/core';
 })
 export class RegisterPageComponent {
 
-  public password: string = '';
-
-  public hidePassword(){
-
-  }
-
+  constructor(
+    private authService: AuthService,
+    private router: Router
+  ){}
 }
