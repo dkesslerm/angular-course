@@ -1,5 +1,5 @@
-# CursoAngular
+# Angular Course
 
-Repositorio con el trabajo que he ido haciendo en el siguiente curso para aprender Angular: https://www.udemy.com/course/angular-fernando-herrera/ 
+This repository contains the exercises and projects I worked on while following [Fernando Herrera’s Angular course on Udemy](https://www.udemy.com/course/angular-fernando-herrera/).
 
-Organizado por distintos módulos
+The content is organized by course module.
